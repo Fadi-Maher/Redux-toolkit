@@ -10,7 +10,7 @@ const App: React.FC = () => {
         <h1 className="text-xl font-bold">My Shop</h1>
         <nav className="space-x-4">
           <Link to="/" className="hover:underline">Products</Link>
-          <Link to="/cart" className="hover:underline">Cart</Link>
+          <Link to="/cart" className="hover:underline">Cart </Link>
         </nav>
       </header>
 

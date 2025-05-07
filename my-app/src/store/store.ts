@@ -3,6 +3,7 @@ import { productsReducer } from "../slices/productsSlices";
 import { categoriesReducer } from "../slices/categoriesSlices";
 import { cartReducer } from "../slices/cartSlice";
 
+
 export const store = configureStore({
   reducer: {
     products: productsReducer,

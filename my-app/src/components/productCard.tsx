@@ -18,6 +18,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 
   const handleAddToCart = () => {
     dispatch(addToCart(product));
+    alert("Item is added")
   };
 
   return (
