@@ -6,6 +6,7 @@ import Cart from "./components/cart";
 import Categories from "./components/categories";
 import { selectTotalQuantity } from "./slices/cartSlice";
 import { useSelector } from "react-redux";
+import ProductDetails from "./components/productDetails";
 const App: React.FC = () => {
 const totalQuantity = useSelector(selectTotalQuantity)
 
@@ -30,6 +31,7 @@ const totalQuantity = useSelector(selectTotalQuantity)
           <Route path="/" element={<ProductList />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </main>
     </div>

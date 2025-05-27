@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts, selectProducts,selectProductStatus} from "../slices/productsSlices"
+import {
+  fetchProducts,
+  selectProducts,
+  selectProductStatus,
+} from "../slices/productsSlices";
 import type { AppDispatch } from "../store/store";
 import ProductCard from "./productCard";
+// import { Link } from "react-router-dom";
 
 const ProductList: React.FC = () => {
-    const dispatch = useDispatch<AppDispatch>();  
-    const products = useSelector(selectProducts);
+  const dispatch = useDispatch<AppDispatch>();
+  const products = useSelector(selectProducts);
   const status = useSelector(selectProductStatus);
 
   useEffect(() => {
@@ -19,7 +24,12 @@ const ProductList: React.FC = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <div
+          key={product.id}
+          onClick={() => (window.location.href = `/product/${product.id}`)}
+        >
+          <ProductCard product={product} />
+        </div>
       ))}
     </div>
   );

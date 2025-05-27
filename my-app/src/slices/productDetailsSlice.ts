@@ -54,11 +54,8 @@ const productDetailsSlice = createSlice({
   },
 });
 
-export const selectProductDetails = (state: RootState) =>
-  state.productDetails.product;
-export const selectProductDetailsStatus = (state: RootState) =>
-  state.productDetails.status;
-export const selectProductDetailsError = (state: RootState) =>
-  state.productDetails.error;
+export const selectProductDetails = (state: RootState) =>     state.productDetails.product;
+export const selectProductDetailsStatus = (state: RootState) => state.productDetails.status;
+export const selectProductDetailsError  =  (state: RootState) => state.productDetails.error;
 
 export const productDetailsReducer = productDetailsSlice.reducer;

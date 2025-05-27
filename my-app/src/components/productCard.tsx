@@ -16,13 +16,14 @@ interface Props {
 const ProductCard: React.FC<Props> = ({ product }) => {
   const dispatch = useDispatch();
 
-  const handleAddToCart = () => {
-    dispatch(addToCart(product));
-    alert("Item is added")
-  };
+  const handleAddToCart = (e: React.MouseEvent) => {
+  e.stopPropagation();
+  dispatch(addToCart(product));
+  alert("Item is added");
+};
 
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col justify-center  ">
+    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col justify-center">
       <img
         src={product.imageCover}
         alt={product.title}

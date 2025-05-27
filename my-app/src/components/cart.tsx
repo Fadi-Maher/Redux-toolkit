@@ -18,6 +18,7 @@ const Cart: React.FC = () => {
         <div key={item.id} className="flex justify-between items-center p-4 border-b">
           <div>
             <h3 className="font-medium">{item.title}</h3>
+            <img src={item.imageCover}  className="w-24"/>
             <p>Qty: {item.quantity}</p>
             <p>${item.price}</p>
           </div>
