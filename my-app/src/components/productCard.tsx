@@ -23,7 +23,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 };
 
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col justify-center">
+    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col justify-center ">
       <img
         src={product.imageCover}
         alt={product.title}
