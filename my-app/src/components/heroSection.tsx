@@ -1,30 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Hero: React.FC = () => {
+      const { t } = useTranslation();
+  
+  
+  
   return (
     <section className="bg-gradient-to-br from-blue-400 to-white py-20 px-6 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
       {/* Text Content */}
-      <div className="flex-1 text-center md:text-left">
+      <div className="flex-1">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-          Discover the Best Deals Online
+        { t("Discover the Best Deals Online")}
         </h1>
         <p className="text-gray-700 text-lg mb-6 max-w-lg">
-          Shop the latest collections at unbeatable prices. Upgrade your
-          lifestyle with our exclusive selections.
+          {t("Shop the latest collections at unbeatable prices. Upgrade your lifestyle with our exclusive selections.")}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <Link
             to="/products"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition"
           >
-            Shop Now
+            {t("Shop Now")}
           </Link>
           <Link
             to="/categories"
             className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition"
           >
-            Browse Categories
+            {t("Browse Categories")}
           </Link>
         </div>
       </div>
