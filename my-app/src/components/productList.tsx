@@ -8,6 +8,7 @@ import {
 import type { AppDispatch } from "../store/store";
 import ProductCard from "./productCard";
 import Hero from "./heroSection";
+import TestApi from "./testApi";
 // import { Link } from "react-router-dom";
 
 const ProductList: React.FC = () => {
@@ -33,7 +34,9 @@ const ProductList: React.FC = () => {
         >
           <ProductCard product={product} />
         </div>
-      ))}
+      ))}    
+         <TestApi/>
+
     </div>
   </>
          

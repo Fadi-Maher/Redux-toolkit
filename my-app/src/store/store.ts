@@ -3,7 +3,7 @@ import { productsReducer } from "../slices/productsSlices";
 import { categoriesReducer } from "../slices/categoriesSlices";
 import { cartReducer } from "../slices/cartSlice";
 import { productDetailsReducer } from "../slices/productDetailsSlice";
-
+import {languageReducer} from "../slices/languageSlice"
 
 
 export const store = configureStore({
@@ -11,7 +11,8 @@ export const store = configureStore({
     products: productsReducer,
     categories: categoriesReducer,
     cart: cartReducer,
-    productDetails : productDetailsReducer
+    productDetails : productDetailsReducer,
+    language : languageReducer
   },
 });
 

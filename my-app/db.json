@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": {
+        "en": "Smartphone",
+        "ar": "هاتف ذكي"
+      },
+      "description": {
+        "en": "A powerful smartphone with great features.",
+        "ar": "هاتف ذكي قوي بميزات رائعة."
+      },
+      "price": 499,
+      "image": "https://th.bing.com/th/id/R.2dd0f4b7395202c22e5fe707e63d21d1?rik=1VBYL5JT76cm8Q&pid=ImgRaw&r=0"
+    },
+    {
+      "id": 2,
+      "title": {
+        "en": "Laptop",
+        "ar": "حاسوب محمول"
+      },
+      "description": {
+        "en": "Lightweight and fast performance.",
+        "ar": "خفيف الوزن وسريع الأداء."
+      },
+      "price": 899,
+      "image": "https://th.bing.com/th/id/R.2dd0f4b7395202c22e5fe707e63d21d1?rik=1VBYL5JT76cm8Q&pid=ImgRaw&r=0"
+    }
+  ]
+}

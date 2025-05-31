@@ -70,3 +70,5 @@ useEffect(() => {
 }
 
 export default ProductDetails
+
+// http://localhost:4000/products
