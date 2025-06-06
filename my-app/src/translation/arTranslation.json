@@ -1,5 +1,6 @@
 {
-  "My Shop": "المتجر",
+  "APEX": "متجر القمة",
+  "Home":"الصفحة الرئيسية",
   "Products": "المنتجات",
   "Categories": "الانواع",
   "Cart": "عربة التسوق",
@@ -7,5 +8,12 @@
   "Discover the Best Deals Online": "اكتشف افضل المنتجات",
   "Shop the latest collections at unbeatable prices. Upgrade your lifestyle with our exclusive selections.": ".تسوق أحدث المجموعات بأسعار لا تقبل المنافسة. قم بترقية نمط حياتك مع اختياراتنا الحصرية.",
    "Shop Now":"تسوق الان",
-   "Browse Categories":"تصفح انواع المنتجات"
+   "Browse Categories":"تصفح انواع المنتجات",
+   "Item is added":"تمت إضافة المنتج",
+   "Item is removed": " تمت إزالة العنصر",
+   "Add to Cart":"اضف الي عربة التسوق",
+   "view All Products":"عرض جميع المنتجات",
+   "Your trusted store":"متجرك الموثوق "
+
+  
 }

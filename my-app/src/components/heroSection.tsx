@@ -8,14 +8,23 @@ const Hero: React.FC = () => {
   
   
   return (
-    <section className="bg-gradient-to-br from-blue-400 to-white py-20 px-6 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+    <section
+      // style={{
+      //   backgroundImage: "url('/hero-bg.jpg')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
+      className=" py-20 px-6 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10 bg-[#1e2939]"
+    >
       {/* Text Content */}
       <div className="flex-1">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-        { t("Discover the Best Deals Online")}
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          {t("Discover the Best Deals Online")}
         </h1>
-        <p className="text-gray-700 text-lg mb-6 max-w-lg">
-          {t("Shop the latest collections at unbeatable prices. Upgrade your lifestyle with our exclusive selections.")}
+        <p className="text-white text-lg mb-6 max-w-lg">
+          {t(
+            "Shop the latest collections at unbeatable prices. Upgrade your lifestyle with our exclusive selections."
+          )}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <Link

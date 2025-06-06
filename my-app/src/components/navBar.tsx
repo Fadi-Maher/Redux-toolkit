@@ -17,19 +17,25 @@ function NavBar() {
   //   document.documentElement.dir = e.target.value === "ar" ? "rtl" : "ltr";
   // };
 
-
-
-    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const newLang = e.target.value as 'en' | 'ar';
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLang = e.target.value as "en" | "ar";
     i18n.changeLanguage(newLang);
     dispatch(setLanguage(newLang));
   };
 
   return (
-    <header className="bg-white shadow p-5 flex justify-between items-center">
-      <h1 className="text-xl font-bold">{t("My Shop")}</h1>
-      <nav className="space-x-6">
+    <header className="   p-5 flex justify-between items-center  bg-[#1e2939] border-2 border-gray-700">
+      <div className="flex gap-2 items-center">
+        <img src="/assets/apex.svg" alt="React Logo" className="w-12 h-12" />
+
+        <h1 className="text-xl font-extrabold text-white">{t("APEX")}</h1>
+      </div>
+
+      <nav className="space-x-6 text-white font-bold">
         <Link to="/" className="hover:underline  ">
+          {t("Home")}
+        </Link>{" "}
+        <Link to="/products" className="hover:underline  ">
           {t("Products")}
         </Link>{" "}
         {""}
@@ -47,9 +53,9 @@ function NavBar() {
         <select
           value={lang}
           onChange={handleChange}
-           className="border p-1 rounded"
+          className="border p-1 rounded text- bg-[#1e2939]"
         >
-          <option value="en">EN</option>
+          <option  value="en">EN</option>
           <option value="ar">AR</option>
         </select>
       </nav>
