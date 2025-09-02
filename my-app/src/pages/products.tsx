@@ -7,7 +7,6 @@ import {
 } from "../slices/productsSlices";
 import type { AppDispatch } from "../store/store";
 import ProductCard from "../components/productCard";
-import { useNavigate } from "react-router-dom";
 // import TestApi from "./testApi";
 // import { Link } from "react-router-dom";
 
@@ -15,7 +14,6 @@ const Products: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const products = useSelector(selectProducts);
   const status = useSelector(selectProductStatus);
- const navigate = useNavigate();
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -25,10 +23,7 @@ const Products: React.FC = () => {
 
 
 
-    const handleViewAllClick = () => {
-    navigate('/products');  
-  };
-
+  
   return (
     <>
  
