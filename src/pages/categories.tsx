@@ -1,30 +1,31 @@
 import { useEffect } from "react";
-import { useSelector , useDispatch } from "react-redux";
-import { selectCategories , fetchCategories } from "../slices/categoriesSlices";
-import type { RootState , AppDispatch } from "../store/store";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCategories, fetchCategories } from "../slices/categoriesSlices";
+import type { RootState, AppDispatch } from "../store/store";
 
-const Categories : React.FC = () => {
-    const dispatch = useDispatch<AppDispatch>() ; 
-    const categories = useSelector(selectCategories) ;  
-    const status = useSelector((state:RootState)=> state.categories.status) ;
-    const error = useSelector((state:RootState)=> state.categories.error )
+const Categories: React.FC = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const categories = useSelector(selectCategories);
+  const status = useSelector((state: RootState) => state.categories.status);
+  const error = useSelector((state: RootState) => state.categories.error);
 
-    useEffect(() => {
-      if (status === "idle") {
-        dispatch(fetchCategories());
-      }
-    
-    
-    }, [dispatch , status]);
-    if(status === "loading") {
-        return <div className="text-center py-10">Loading categories...</div>;
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchCategories());
     }
-    if (status === "failed") {
-                return <div className="text-center py-10 text-red-500">Error: {error}</div>;
-              }
-
-
-
+  }, [dispatch, status]);
+  if (status === "loading") {
+    return (
+      <div className="text-center py-10">
+            <div className="flex justify-center items-center min-h-screen bg-white">
+              <div className="h-12 w-12 animate-spin rounded-full border-4 border-t-transparent border-blue-500"></div>
+            </div>
+      </div>
+    );
+  }
+  if (status === "failed") {
+    return <div className="text-center py-10 text-red-500">Error: {error}</div>;
+  }
 
   return (
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
