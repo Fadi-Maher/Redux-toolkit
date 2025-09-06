@@ -39,6 +39,9 @@ const Footer: React.FC = () => {
       <div className="text-center text-gray-500 text-xs mt-4">
         &copy; {new Date().getFullYear()} APEX. {t("All rights reserved.")}.
       </div>
+      <div className="text-center text-gray-500 text-xs mt-4">
+        &copy;   {t("Developed by <Fady/>")}
+      </div>
     </footer>
   );
 };
