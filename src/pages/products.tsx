@@ -19,10 +19,10 @@ const Products: React.FC = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  if (status === "loading") return;
+  if (status === "loading") return(
         <div className="flex justify-center items-center min-h-screen bg-white">
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-t-transparent border-blue-500"></div>
-        </div>;
+          <div className="h-16 w-16 animate-spin rounded-full border-8 border-t-transparent border-blue-500"></div>
+        </div>)
   if (status === "failed") return <p>Failed to load products.</p>;
 
   return (
