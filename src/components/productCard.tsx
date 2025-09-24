@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/cartSlice";
 import { useTranslation } from "react-i18next";
-
+import { toast } from "react-toastify";               
 interface Product {
   id: string;
   title: string;
@@ -22,7 +22,9 @@ const ProductCard: React.FC<Props> = ({ product }) => {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
     dispatch(addToCart(product));
-    alert(t("Item is added"));
+    // alert(t("Item is added"));
+    toast.success("Item added!");
+
   };
 
   return (
@@ -32,10 +34,11 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         alt={product.title}
         className="w-fit h-48 mx-auto mb-4 rounded"
       />
-      <h3 className="text-lg font-semibold mb-2 text-center text-white">
+      <p className=" text-center cursor-pointer hover:font-bold p-2 bg-[#1e2939] text-white w-fit m-auto rounded-2xl mb-2">view details</p>
+      <h3 className="text-lg font-semibold mb-2 text-center text-[#1e2939]">
         {product.title}
       </h3>
-      <p className="text-white font-bold mb-4 text-center">${product.price}</p>
+      <p className="text-[#1e2939] font-bold mb-4 text-center">${product.price}</p>
       <button
         onClick={handleAddToCart}
         className="bg-[#1e2939] text-white px-4 py-2 rounded hover:bg-blue-600"
