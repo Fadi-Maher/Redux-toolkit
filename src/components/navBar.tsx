@@ -24,6 +24,7 @@ function NavBar() {
     const newLang = e.target.value as "en" | "ar";
     i18n.changeLanguage(newLang);
     dispatch(setLanguage(newLang));
+    setMenuOpen(false)
   };
 
   return (
@@ -79,17 +80,17 @@ function NavBar() {
         } md:flex md:static md:flex-row md:gap-6 md:bg-transparent md:p-0 text-white font-bold`}
       >
         {" "}
-        <Link to="/" className="hover:underline  ">
+        <Link to="/" className="hover:underline  "  onClick={() => setMenuOpen(false)}>
           {t("Home")}
         </Link>{" "}
-        <Link to="/products" className="hover:underline  ">
+        <Link to="/products" className="hover:underline  "  onClick={() => setMenuOpen(false)}>
           {t("Products")}
         </Link>{" "}
         {""}
-        <Link to="/cart" className="hover:underline">
+        <Link to="/cart" className="hover:underline"  onClick={() => setMenuOpen(false)}>
           {t("Cart")}{" "}
         </Link>
-        <Link to="/categories" className="hover:underline">
+        <Link to="/categories" className="hover:underline"  onClick={() => setMenuOpen(false)}>
           {t("Categories")}{" "}
         </Link>
         <span className="cart-count">
@@ -100,30 +101,14 @@ function NavBar() {
           value={lang}
           onChange={handleChange}
           className="border p-1 rounded text- bg-[#1e2939]"
+          
         >
-          <option value="en">EN</option>
+          <option value="en" >EN</option>
           <option value="ar">AR</option>
         </select>
       </nav>
 
-      {/* mobile controls */}
-      <div className="flex items-center md:hidden">
-        {/* <button
-            onClick={() => setOpen((s) => !s)}
-            aria-expanded={open}
-            aria-label={open ? "Close menu" : "Open menu"}
-            className="text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            {/* burger / close icon */}
-        {/* {open ? ( */}
-
-        {/* ) : (
-              // <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              //   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              // </svg>
-            )} */}
-        {/* </button> */}
-      </div>
+     
     </header>
   );
 }
