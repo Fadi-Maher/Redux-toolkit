@@ -74,7 +74,7 @@ function NavBar() {
    
          <nav  className={`${
           menuOpen
-            ? "flex flex-col gap-4 absolute top-20 right-0  bg-[#4984e9] opacity-80 p-4 rounded-md"
+            ? "flex flex-col gap-4 absolute top-20 right-5  bg-[#4984e9] opacity-80 p-4 rounded-md"
             : "hidden"
         } md:flex md:static md:flex-row md:gap-6 md:bg-transparent md:p-0 text-white font-bold`}
       >
